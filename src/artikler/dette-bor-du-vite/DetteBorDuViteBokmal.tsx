@@ -11,7 +11,7 @@ import Ekspanderbartpanel from "nav-frontend-ekspanderbartpanel";
 const DetteBorDuViteBokmal: React.FC = () => {
   return (
     <Artikkel>
-      <Innholdstittel>André test: Dette bør du vite før du søker</Innholdstittel>
+      <Innholdstittel>Dette bør du vite før du søker</Innholdstittel>
 
       <Ingress>
         Økonomisk sosialhjelp er en midlertidig inntekt. Før du kan få stønad må
