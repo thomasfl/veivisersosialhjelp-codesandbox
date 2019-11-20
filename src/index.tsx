@@ -1,10 +1,10 @@
 import * as React from "react";
-import { render } from "react-dom";
+import {render} from "react-dom";
 import DetteBorDuVite from "./artikler/dette-bor-du-vite/DetteBorDuVite";
 import "./styles.css";
 import "./index.less";
-import { Router, Route, Switch } from "react-router";
-import { createBrowserHistory } from 'history'
+import {Router, Route, Switch} from "react-router";
+import {createBrowserHistory} from 'history'
 import {erDev} from "./utils/restUtils";
 import DetteKanDuSokeOm from "./artikler/dette-kan-du-soke-om/DetteKanDuSokeOm";
 import AndreMuligheter from "./artikler/andre-muligheter/AndreMuligheter";
@@ -24,24 +24,35 @@ export const history = createBrowserHistory({
 
 
 function App() {
-  return (
-            <Router history={history}>
-                <br/>
-                <br/>
-                <a href="dette-bor-du-vite">/dette-bor-du-vite</a> &nbsp;
-                <a href="dette-kan-du-soke-om">/dette-kan-du-soke-om</a>
-                <br/>
-                <Switch>
-                    <Route exact path="/" component={DetteBorDuVite}/>
-                    <Route exact path="/dette-bor-du-vite" component={DetteBorDuVite}/>
-                    <Route exact path="/andre-mulighter" component={AndreMuligheter}/>
-                    <Route exact path="/dette-kan-du-soke-om" component={DetteKanDuSokeOm}/>
-                </Switch>
-                <br/>
-                <br/>
-            </Router>
-  );
+
+    const onClick1 = (event: any) => {
+        history.push("dette-bor-du-vite");
+        event.preventDefault();
+    };
+
+    const onClick2 = (event: any) => {
+        history.push("dette-kan-du-soke-om");
+        event.preventDefault();
+    };
+
+    return (
+        <Router history={history}>
+            <br/>
+            <br/>
+            <a onClick={(event: any) => onClick1(event)} href="dette-bor-du-vite">/dette-bor-du-vite</a> &nbsp;
+            <a onClick={(event: any) => onClick2(event)} href="dette-kan-du-soke-om">/dette-kan-du-soke-om</a>
+            <br/>
+            <Switch>
+                <Route exact path="/" component={DetteBorDuVite}/>
+                <Route exact path="/dette-bor-du-vite" component={DetteBorDuVite}/>
+                <Route exact path="/andre-mulighter" component={AndreMuligheter}/>
+                <Route exact path="/dette-kan-du-soke-om" component={DetteKanDuSokeOm}/>
+            </Switch>
+            <br/>
+            <br/>
+        </Router>
+    );
 }
 
 const rootElement = document.getElementById("root");
-render(<App />, rootElement);
+render(<App/>, rootElement);
