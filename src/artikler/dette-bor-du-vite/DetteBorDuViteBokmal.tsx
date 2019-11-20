@@ -12,11 +12,12 @@ const DetteBorDuViteBokmal: React.FC = () => {
 
   return (
     <Artikkel tittel="Dette bør du vite før du søker">
+      <b>TODO</b>
         <ul>
             <li style={{textDecoration: "line-through"}}>Craco: ok</li>
             <li style={{textDecoration: "line-through"}}>Router</li>
-            <li>Forside</li>
-            <li>Banner</li>
+            <li style={{textDecoration: "line-through"}}>Forside</li>
+            <li style={{textDecoration: "line-through"}}>Banner</li>
             <li>Forskjellige html filer i dev og dev?</li>
         </ul>
       <Ingress>
