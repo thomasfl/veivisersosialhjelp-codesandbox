@@ -28,8 +28,8 @@ function App() {
             <Router history={history}>
                 <br/>
                 <br/>
-                <a href="/dette-bor-du-vite">/dette-bor-du-vite</a> &nbsp;
-                <a href="/dette-kan-du-soke-om">/dette-kan-du-soke-om</a>
+                <a href="dette-bor-du-vite">/dette-bor-du-vite</a> &nbsp;
+                <a href="dette-kan-du-soke-om">/dette-kan-du-soke-om</a>
                 <br/>
                 <Switch>
                     <Route exact path="/" component={DetteBorDuVite}/>
