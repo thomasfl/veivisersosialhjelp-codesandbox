@@ -13,6 +13,10 @@ const DetteBorDuViteBokmal: React.FC = () => {
     <Artikkel>
       <Innholdstittel>Dette bør du vite før du søker</Innholdstittel>
 
+        <ul>
+            <li>Cracco: ok</li>
+            <li>Forskjellige html filer i dev og dev</li>
+        </ul>
       <Ingress>
         Økonomisk sosialhjelp er en midlertidig inntekt. Før du kan få stønad må
         du vurdere alle andre muligheter til å forsørge deg selv. Dette kan for
