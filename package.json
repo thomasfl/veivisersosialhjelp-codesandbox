@@ -44,7 +44,10 @@
     "typescript": "3.3.3"
   },
   "scripts": {
-    "start": "craco start",
+    "use_index_codesandbox_html": "node -e \"require('fs').rename('public/index_codesandbox.html', 'public/index.html', function(err) { if (err) console.log(err); console.log('File use_index_codesandbox.html successfully renamed!') })\"",
+    "use_index_normal_html": "node -e \"require('fs').rename('public/index_normal.html', 'public/index.html', function(err) { if (err) console.log(err); console.log('Using index_normal.html as template.') })\"",
+    "prepare_for_codesandbox": "craco build && copy_compiles_css && use_index_codesandbox_html",
+    "start": "npm run use_index_normal_html && craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"

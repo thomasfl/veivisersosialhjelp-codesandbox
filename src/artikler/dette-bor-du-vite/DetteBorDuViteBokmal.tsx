@@ -14,7 +14,7 @@ const DetteBorDuViteBokmal: React.FC = () => {
       <Innholdstittel>Dette bør du vite før du søker</Innholdstittel>
 
         <ul>
-            <li>Cracco: ok</li>
+            <li>Craco: ok</li>
             <li>Forskjellige html filer i dev og dev</li>
         </ul>
       <Ingress>

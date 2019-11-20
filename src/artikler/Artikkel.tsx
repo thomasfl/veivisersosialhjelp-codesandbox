@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./artikkel.less";
 
 const Artikkel: React.FC<{ children: React.ReactNode, className?: string }> = ({children, className}) => {
 
