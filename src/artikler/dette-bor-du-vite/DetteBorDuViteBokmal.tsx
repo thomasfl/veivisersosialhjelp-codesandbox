@@ -14,8 +14,9 @@ const DetteBorDuViteBokmal: React.FC = () => {
       <Innholdstittel>Dette bør du vite før du søker</Innholdstittel>
 
         <ul>
-            <li>Craco: ok</li>
+            <li style={{textDecoration: "line-through"}}>Craco: ok</li>
             <li>Forskjellige html filer i dev og dev</li>
+            <li>Redux og router inkludert</li>
         </ul>
       <Ingress>
         Økonomisk sosialhjelp er en midlertidig inntekt. Før du kan få stønad må
