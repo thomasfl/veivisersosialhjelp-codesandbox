@@ -4,7 +4,6 @@ import DetteBorDuVite from "./artikler/dette-bor-du-vite/DetteBorDuVite";
 import "./styles.css";
 import "./index.less";
 import { Router, Route, Switch } from "react-router";
-import { Link } from "react-router-dom";
 import { createBrowserHistory } from 'history'
 import {erDev} from "./utils/restUtils";
 import DetteKanDuSokeOm from "./artikler/dette-kan-du-soke-om/DetteKanDuSokeOm";
@@ -28,9 +27,9 @@ function App() {
   return (
             <Router history={history}>
                 <br/>
-                <Link to="/dette-kan-du-soke-om">/dette-kan-du-soke-om</Link> &nbsp; &nbsp;
-                <Link to="/dette-bor-du-vite">/dette-bor-du-vite</Link>
                 <br/>
+                <a href="/dette-bor-du-vite">/dette-bor-du-vite</a> &nbsp;
+                <a href="/dette-kan-du-soke-om">/dette-kan-du-soke-om</a>
                 <br/>
                 <Switch>
                     <Route exact path="/" component={DetteBorDuVite}/>
