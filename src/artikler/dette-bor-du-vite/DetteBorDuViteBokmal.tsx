@@ -9,10 +9,9 @@ import {
 import Ekspanderbartpanel from "nav-frontend-ekspanderbartpanel";
 
 const DetteBorDuViteBokmal: React.FC = () => {
-  return (
-    <Artikkel>
-      <Innholdstittel>Dette bør du vite før du søker</Innholdstittel>
 
+  return (
+    <Artikkel tittel="Dette bør du vite før du søker">
         <ul>
             <li style={{textDecoration: "line-through"}}>Craco: ok</li>
             <li style={{textDecoration: "line-through"}}>Router</li>

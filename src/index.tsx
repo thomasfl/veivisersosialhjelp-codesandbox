@@ -13,27 +13,6 @@ function App() {
 
     return (
         <Router history={history}>
-            <br/>
-            <br/>
-            &nbsp; <a
-                onClick={(event: any) => onClickLink(event, "")}
-                href="/"
-            >
-                /
-            </a> &nbsp;
-            <a
-                onClick={(event: any) => onClickLink(event, "dette-bor-du-vite")}
-                href="dette-bor-du-vite"
-            >
-                /dette-bor-du-vite
-            </a> &nbsp;
-            <a
-                onClick={(event: any) => onClickLink(event, "dette-kan-du-soke-om")}
-                href="dette-bor-du-dette-kan-du-soke-om"
-            >
-                /dette-kan-du-soke-om
-            </a> &nbsp;
-            <br/>
             <Switch>
                 <Route exact path="/" component={Forside}/>
                 <Route exact path="/dette-bor-du-vite" component={DetteBorDuVite}/>
