@@ -2,7 +2,6 @@ import * as React from "react";
 import Artikkel from "../Artikkel";
 import {
   Ingress,
-  Innholdstittel,
   Normaltekst,
   Undertittel
 } from "nav-frontend-typografi";
