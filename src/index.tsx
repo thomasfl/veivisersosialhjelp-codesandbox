@@ -6,7 +6,7 @@ import "./index.less";
 import {Router, Route, Switch} from "react-router";
 import DetteKanDuSokeOm from "./artikler/dette-kan-du-soke-om/DetteKanDuSokeOm";
 import AndreMuligheter from "./artikler/andre-muligheter/AndreMuligheter";
-import {history, onClickLink} from "./utils/navigasjon";
+import {history } from "./utils/navigasjon";
 import Forside from "./artikler/forside/Forside";
 
 function App() {

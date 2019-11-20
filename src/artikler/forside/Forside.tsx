@@ -10,7 +10,7 @@ import Dekorator from "../../komponenter/dekorator/Dekorator";
 const Forside: React.FC = () => {
 
     return (
-        <Dekorator>
+        <Dekorator erForside={true}>
             <div className="blokk-center forside">
 
                 <InfoPanelContainer>

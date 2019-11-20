@@ -1,12 +1,9 @@
 import * as React from 'react';
 import './banner.less';
 import {Sidetittel, Innholdstittel} from 'nav-frontend-typografi';
-import {history} from "../../utils/navigasjon";
 import VeiviserBannerIllustrasjon from "../bilder/VeiviserBannerIllustrasjon";
 
-const Dekorator: React.FC<{ children: React.ReactNode, tittel?: string }> = ({children, tittel}) => {
-
-    const erForside: boolean = (history.location.pathname === "/");
+const Dekorator: React.FC<{ children: React.ReactNode, tittel?: string, erForside?: boolean}> = ({children, tittel, erForside}) => {
 
     let bannerClassNames = erForside ? 'banner__forside' : 'banner__underside';
 
