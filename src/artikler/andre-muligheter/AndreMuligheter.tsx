@@ -1,23 +1,23 @@
 import * as React from "react";
 import Artikkel from "../Artikkel";
 import {Ingress, Normaltekst, Sidetittel, Undertittel} from "nav-frontend-typografi";
-import LightBulb from "../../components/illustrations/LightBulb";
+
 import SokJobbPanel from "./SokJobbPanel";
-import {useBannerTittel} from "../../utils/navigasjonUtils";
+
 import "./komponenter/andreMuligheter.less";
 import PanelBase from "nav-frontend-paneler";
-import Hus from "../../components/illustrations/Hus";
+
 import {LenkepanelBase} from "nav-frontend-lenkepanel/lib";
 import JobblystPanel from "./JobblystPanel";
 
 const AndreMuligheter: React.FC = () => {
 
-    useBannerTittel("Andre muligheter");
+
 
     return (
         <>
             <Artikkel className="artikkel--andre_mulighter">
-                <LightBulb className="illustrasjon"/>
+
                 <Sidetittel>Andre muligheter</Sidetittel>
                 <Ingress>
                     Økonomisk sosialhjelp er en midlertidig stønad. Du må vurdere andre
@@ -110,7 +110,7 @@ const AndreMuligheter: React.FC = () => {
                 <SokJobbPanel/>
 
                 <PanelBase className="hjelp_til_bolig_panel">
-                    <Undertittel><Hus/>Hjelp til bolig</Undertittel>
+                    <Undertittel>Hjelp til bolig</Undertittel>
                 </PanelBase>
                 <div className="hjelp_til_bolig_panel__underpaneler">
                     <LenkepanelBase
