@@ -15,8 +15,10 @@ const DetteBorDuViteBokmal: React.FC = () => {
 
         <ul>
             <li style={{textDecoration: "line-through"}}>Craco: ok</li>
-            <li>Forskjellige html filer i dev og dev</li>
-            <li>Redux og router inkludert</li>
+            <li style={{textDecoration: "line-through"}}>Router</li>
+            <li>Forside</li>
+            <li>Banner</li>
+            <li>Forskjellige html filer i dev og dev?</li>
         </ul>
       <Ingress>
         Økonomisk sosialhjelp er en midlertidig inntekt. Før du kan få stønad må

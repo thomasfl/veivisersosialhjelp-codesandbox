@@ -4,46 +4,38 @@ import DetteBorDuVite from "./artikler/dette-bor-du-vite/DetteBorDuVite";
 import "./styles.css";
 import "./index.less";
 import {Router, Route, Switch} from "react-router";
-import {createBrowserHistory} from 'history'
-import {erDev} from "./utils/restUtils";
 import DetteKanDuSokeOm from "./artikler/dette-kan-du-soke-om/DetteKanDuSokeOm";
 import AndreMuligheter from "./artikler/andre-muligheter/AndreMuligheter";
-
-/**
- * Resolves basename in a pathname independent way
- */
-export function getAbsoluteBasename() {
-    // @ts-ignore
-    // return erDev() ? "sosialhjelp/innsyn" : window.location.pathname.replace(/^\/(([^/]+\/)?sosialhjelp\/innsyn).+$/, "$1");
-    return erDev() ? "sosialhjelp" : window.location.pathname.replace(/^\/(([^/]+\/)?sosialhjelp).+$/, "$1");
-}
-
-export const history = createBrowserHistory({
-    basename: getAbsoluteBasename()
-});
-
+import {history, onClickLink} from "./utils/navigasjon";
+import Forside from "./artikler/forside/Forside";
 
 function App() {
-
-    const onClick1 = (event: any) => {
-        history.push("dette-bor-du-vite");
-        event.preventDefault();
-    };
-
-    const onClick2 = (event: any) => {
-        history.push("dette-kan-du-soke-om");
-        event.preventDefault();
-    };
 
     return (
         <Router history={history}>
             <br/>
             <br/>
-            <a onClick={(event: any) => onClick1(event)} href="dette-bor-du-vite">/dette-bor-du-vite</a> &nbsp;
-            <a onClick={(event: any) => onClick2(event)} href="dette-kan-du-soke-om">/dette-kan-du-soke-om</a>
+            &nbsp; <a
+                onClick={(event: any) => onClickLink(event, "")}
+                href="/"
+            >
+                /
+            </a> &nbsp;
+            <a
+                onClick={(event: any) => onClickLink(event, "dette-bor-du-vite")}
+                href="dette-bor-du-vite"
+            >
+                /dette-bor-du-vite
+            </a> &nbsp;
+            <a
+                onClick={(event: any) => onClickLink(event, "dette-kan-du-soke-om")}
+                href="dette-bor-du-dette-kan-du-soke-om"
+            >
+                /dette-kan-du-soke-om
+            </a> &nbsp;
             <br/>
             <Switch>
-                <Route exact path="/" component={DetteBorDuVite}/>
+                <Route exact path="/" component={Forside}/>
                 <Route exact path="/dette-bor-du-vite" component={DetteBorDuVite}/>
                 <Route exact path="/andre-mulighter" component={AndreMuligheter}/>
                 <Route exact path="/dette-kan-du-soke-om" component={DetteKanDuSokeOm}/>
